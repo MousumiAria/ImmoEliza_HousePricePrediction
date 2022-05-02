@@ -23,4 +23,4 @@ def output():
     return render_template('result.html',price=calcprice)
  
 
-app.run(host='localhost', port=5001)
+app.run(host='localhost', port=5000)
