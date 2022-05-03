@@ -59,4 +59,5 @@ def createJsonDataFromRequest(req):
 
     return json_data
 
-app.run(host='localhost', port=5002)
+#app.run(host='localhost', port=5002)
+app.run()
