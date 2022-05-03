@@ -1,26 +1,62 @@
 import numpy as np
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,jsonify
+import pickle
+import json
+from predict import prediction
+
 
 app = Flask(__name__)
  
 #route to form to get house details from user
-@app.route('/HouseDetails/')
+@app.route('/HouseDetails/', methods = ['POST', 'GET'])
 def inputdata():
-    return render_template('HouseDetails.html')
-
-#route to form to show predicted price for the required house
-@app.route('/result/', methods = ['POST', 'GET'])
-def output():
     if request.method == 'GET':
-        return f"The URL /output is accessed directly. Try going to '/input' to submit form"
+        return render_template('HouseDetails.html')
     if request.method == 'POST':
-        form_data = request.form
+
+        #check which button is clicked
+        btn_action = request.form['btn_submit'] 
+
+        #if validate then prepare the json data else predict the price
+        if btn_action == "Validate":
+            jsonReq = createJsonDataFromRequest(request)
+            return render_template('HouseDetails.html',json_data = jsonReq)
+        else:
+            house_data = request.form['jsonHouse_data'] 
+
+            if house_data != "":
+                data = json.loads(house_data)                
+                #list = data
+                predic_price = prediction.predict(list(data.values()))
+                return render_template('HouseDetails.html',price = predic_price)
+            else:
+                error_data = "please validate first"
+                return render_template('HouseDetails.html',error = error_data)
+          
         
-    #call the model to predict the price based on form data
-    calcprice = "345"
+def createJsonDataFromRequest(req):
+    """
+    get the request form data and create json
 
-    #return render_template('data.html',result=result)
-    return render_template('result.html',price=calcprice)
- 
+    Parameters
+    ----------
+    request
 
-app.run(host='localhost', port=5000)
+    Returns
+    -------
+    json data
+    """
+
+    form_data = req.form
+    data = {}
+    data["house_type"]=  form_data['house_type']
+    data["house_surface"]=  form_data['house_surface']
+    data["house_bedroom"]=  form_data['house_bedroom']
+    data["house_attic"]=  form_data['house_attic']
+    data["house_terrace"]=  form_data['house_terrace']
+    data["house_swimmingpool"]=  form_data['house_swimmingpool']
+    json_data = json.dumps(data)
+
+    return json_data
+
+app.run(host='localhost', port=5002)
