@@ -25,7 +25,7 @@ where
 
 
 ## Description:
-ImmoEliza_HousePricePrediction is a Project  which provide a tool to predict house price based on it's features. To created a model here used linear regration machine learning method, an API Flask that handled the model and deploy it to Heroku. 
+ImmoEliza_HousePricePrediction is a Project  which provide a tool to predict house price based on it's features. 
 
 
 ## Used Language and Libraries:
