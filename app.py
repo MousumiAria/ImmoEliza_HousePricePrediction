@@ -17,7 +17,7 @@ def inputdata():
         #check which button is clicked
         btn_action = request.form['btn_submit'] 
 
-        #if validate then prepare the json data else predict the price
+        #f validate then prepare the json data else predict the price
         if btn_action == "Validate":
             jsonReq = createJsonDataFromRequest(request)
             return render_template('HouseDetails.html',json_data = jsonReq)
@@ -49,15 +49,15 @@ def createJsonDataFromRequest(req):
 
     form_data = req.form
     data = {}
-    data["house_type"]=  form_data['house_type']
-    data["house_surface"]=  form_data['house_surface']
-    data["house_bedroom"]=  form_data['house_bedroom']
-    data["house_attic"]=  form_data['house_attic']
-    data["house_terrace"]=  form_data['house_terrace']
-    data["house_swimmingpool"]=  form_data['house_swimmingpool']
+   
+    data["house_surface"]=  int(form_data['house_surface'])
+    data["house_bedroom"]=  int(form_data['house_bedroom'])
+    data["house_attic"]=  int(form_data['house_attic'])
+    data["house_terrace"]=  int(form_data['house_terrace'])
+    data["house_swimmingpool"]=  int(form_data['house_swimmingpool'])
     json_data = json.dumps(data)
 
     return json_data
 
 #app.run(host='localhost', port=5002)
-#app.run()
+app.run()

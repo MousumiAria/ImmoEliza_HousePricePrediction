@@ -1,22 +1,41 @@
-# Immo_Eliza_scraping
 
-Immo_Eliza_scraping is a project intended to gather as much readable data as possible for the pseudo realestate company called ImmoEliza. With this project, we were tasked to gather field attributes from as many (~10000) houses in Belgium. Field attributes include information like locality, type of property, price, area, no. of rooms, no. of bathrooms etc.
+<h1> <align="center">ImmoEliza_HousePricePrediction</h1>
+where
 
-The python file included here is written to scrap a website for such information/field attributes, convert them into a json object for each individual house and append it to a .CSV file.
-Once we have a .CSV file the data is cleaned and converted to a readable dataset.
+## Developers Names: 
 
-This data is exclusive to houses within Belgium, but can be changed given you have a source from which a list of links can be created for your needs.
+<a href="https://https://github.com/MousumiAria"> Mousumi Sen</a>
 
-## Installation
+## Level: 
+* Junior Developer
 
-In order to run this program, make sure you have the python packages: Pandas, selenium and BeautifulSoup, json installed. If you do not wish to run this programme and simply want it to understand how the data was arrived at then these packages will not be necessary.
+## Organization:
+* Becode Company (Ghent)
+<img src="https://becode.org/app/uploads/2021/06/logo-becode.png" alt="Logo" width="200" height="200"><a href="https://github.com/becodeorg"><strong>BeCode</strong></a>
+
+## The timeline of the project: 
+**27/04/2022 - 05/05/2022**
+
+## Duration: 
+* 6 days
 
 
-## Usage
-
-This program is used to scrap for data regarding an online accessible server; primarily regarding housing but could be altered to work for similar purposes.
-Once the Data is scrapped, a dataset is created in the form of a readable .CSV file.
+## Dataset details:
+* DataSets used from The real estate company "ImmoEliza" 
 
 
-## Contributors
-This project was performed by Mohammed Bouazzaoui, Anzeem Arief and Mousumi Sen. You are welcome to append and make changes to the source code with intentions of making it more efficient or so for it to suit your needs. Please do create a branch and request for approvals before you make changes!
+## Description:
+ImmoEliza_HousePricePrediction is a Project  which provide a tool to predict house price based on it's features. To created a model here used linear regration machine learning method, an API Flask that handled the model and deploy it to Heroku. 
+
+
+## Used Language and Libraries:
+
+* Python
+* Numpy
+* Pandas 
+* Matplotlib
+* Flask
+* sklearn
+* gunicorn
+
+

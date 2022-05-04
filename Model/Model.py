@@ -10,7 +10,7 @@ from sklearn.metrics import f1_score
 import pickle
 
 
-# Save new cleaned data in a Datafream
+# Save new cleane data in a Datafream
 df=pd.read_csv("New-ImmoElliza.csv")
 
 # drop column 'Unnamed:0'
