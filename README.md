@@ -2,7 +2,7 @@
 <h1> <align="center">ImmoEliza_HousePricePrediction</h1>
 where
 
-## Developers Names: 
+## Developer: 
 
 <a href="https://https://github.com/MousumiAria"> Mousumi Sen</a>
 
