@@ -2,7 +2,11 @@
 <h1> <align="center">ImmoEliza_HousePricePrediction</h1>
 where
 
+<<<<<<< HEAD
 ## Developers Names: 
+=======
+## Developer: 
+>>>>>>> aa29704338da99cd8f294f20c7d393b965c73574
 
 <a href="https://https://github.com/MousumiAria"> Mousumi Sen</a>
 
@@ -25,7 +29,11 @@ where
 
 
 ## Description:
+<<<<<<< HEAD
 ImmoEliza_HousePricePrediction is a Project  which provide a tool to predict house price based on it's features. To created a model here used linear regration machine learning method, an API Flask that handled the model and deploy it to Heroku. 
+=======
+ImmoEliza_HousePricePrediction is a Project  which provide a tool to predict house price based on it's features. 
+>>>>>>> aa29704338da99cd8f294f20c7d393b965c73574
 
 
 ## Used Language and Libraries:
