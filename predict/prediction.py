@@ -72,7 +72,7 @@ def predict(mylist):
     prediction = model.predict([np.array(mylist)])
     
      
-    return prediction
+    return prediction[0]
 
 #dic={"house_surface":1235,"house_bedroom":6,"house_attic":0,"house_terrace":1,"house_swimmingpool":1}
 
