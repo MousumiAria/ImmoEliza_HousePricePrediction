@@ -28,8 +28,8 @@ def inputdata():
                 data = json.loads(house_data)                
                 #list = data
                 predic_price = prediction.predict(list(data.values()))
-                
-                return render_template('HouseDetails.html',price = predic_price:.2f)
+                round_price=round(predic_price,2)
+                return render_template('HouseDetails.html',price = round_price)
             else:
                 error_data = "please validate first"
                 return render_template('HouseDetails.html',error = error_data)
