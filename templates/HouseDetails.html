@@ -18,7 +18,7 @@
         <input type="hidden" value="{{ json_data }}" name="jsonHouse_data"/>
 
         {% if price%}
-            <h1> Based on Our model your House price is £ {{ price }}</h1>
+            <h1> Based on Our model your House price is £ {{ price:.2f }}</h1>
         {% endif %}
     </form>    
 </body>
