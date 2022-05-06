@@ -4,21 +4,21 @@
     
     </head>
  <body>
-    <h1> House Price Prediction based on Linear Regression</h1>
+    <h1> House Price Prediction </h1>
     <h2>Enter your required House details</h2>
     <form action="/HouseDetails/" method = "POST" >
         <p>House Type <input type = "text" name = "house_type" value="{{ request.form['house_type'] }}"/></p>
-        <p>house_surface <input type = "text" name = "house_surface" value="{{ request.form['house_surface'] }}"/></p>
-        <p>house_bedroom <input type = "text" name = "house_bedroom" value="{{ request.form['house_bedroom'] }}"/></p>
-        <p>house_attic <input type = "text" name = "house_attic" value="{{ request.form['house_attic'] }}"/></p>
-        <p>house_terrace <input type = "text" name = "house_terrace" value="{{ request.form['house_terrace'] }}"/></p>
-        <p>house_swimmingpool <input type = "text" name = "house_swimmingpool" value="{{ request.form['house_swimmingpool'] }}"/></p>
+        <p>Surface Area <input type = "text" name = "house_surface" value="{{ request.form['house_surface'] }}"/></p>
+        <p>No. of Bedroom <input type = "text" name = "house_bedroom" value="{{ request.form['house_bedroom'] }}"/></p>
+        <p>Attic <input type = "text" name = "house_attic" value="{{ request.form['house_attic'] }}"/></p>
+        <p>Terrace <input type = "text" name = "house_terrace" value="{{ request.form['house_terrace'] }}"/></p>
+        <p>Swimmingpool <input type = "text" name = "house_swimmingpool" value="{{ request.form['house_swimmingpool'] }}"/></p>
         <p><input type = "submit" value = "Submit" name="btn_submit"/></p>
         <p><input type = "submit" value = "Validate" name="btn_submit"/></p>
         <input type="hidden" value="{{ json_data }}" name="jsonHouse_data"/>
 
         {% if price%}
-            <h1> Based on Our model your House price is Euro {{ price }}</h1>
+            <h1> Based on Our model your House price is £ {{ price }}</h1>
         {% endif %}
     </form>    
 </body>
