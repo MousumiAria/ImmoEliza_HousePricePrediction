@@ -15,7 +15,7 @@ import pickle
 def train():
 
     # Save new cleaned data in a Datafream
-    df=pd.read_csv("New-ImmoElliza.csv")
+    df=pd.read_csv("../Data/New-ImmoElliza.csv")
 
     # drop column 'Unnamed:0'
     df = df.drop(['Unnamed: 0'], axis = 1)

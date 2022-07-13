@@ -4,7 +4,6 @@ import pickle
 import json
 from predict import prediction
 
-
 app = Flask(__name__)
  
 #route to form to get house details from user
@@ -61,4 +60,4 @@ def createJsonDataFromRequest(req):
     return json_data
 
 #app.run(host='localhost', port=5002)
-#app.run()
+app.run()
