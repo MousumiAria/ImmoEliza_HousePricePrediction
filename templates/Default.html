@@ -1,0 +1,100 @@
+<html><head>
+	<link rel="stylesheet" href="../static/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Immo Eliza House price Prediction</title>
+	
+</head>
+<body>
+	<div class="container" id="container">		
+		<div class="form-container image-container">
+			<div style="height:50%">
+			<img src="../static/images/house-icon1.png" height="100px" class="imgcnt">
+			</div>
+			<div style="height:50%;text-align:center">
+				<img src="../static/images/text3.png" class="imgcnt1">
+				<!--<span style="text-align: center;
+    padding-left: 10px;
+    font-family: cursive;
+    font-size: 15px;">Immo Eliza House Price Prediction</span>-->
+			</div>
+		</div>
+		<div class="form-container log-in-container">
+			<form method="post">
+				<div class="form-row">
+					<div class="name">House Type *</div>
+					<div class="value">
+						<div class="input-group">
+							<select name="house_type" tabindex="-1" class="input--style-5" aria-hidden="true" value="{{ request.form['house_type'] }}" >
+								<option disabled="disabled" selected="selected">Choose option</option>
+								<option value="Apartment" {{'selected' if request.form['house_type'] == 'Apartment' else ""}}>Apartment</option>
+								<option value="House" {{'selected' if request.form['house_type'] == 'House' else ""}}>House</option>
+								<option value="Villa" {{'selected' if request.form['house_type'] == 'Villa' else ""}}>Villa</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="name">Surface Area *</div>
+					<div class="value">
+						<div class="input-group">
+						<input class="input--style-5" type="text" name="house_surface" value="{{ request.form['house_surface'] }}">
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="name">No. of Bedroom *</div>
+					<div class="value">
+						<div class="input-group">
+							<select name="house_bedroom" tabindex="-1" class="input--style-5" aria-hidden="true" value="{{ request.form['house_bedroom'] }}" >
+								<option disabled="disabled" selected="selected">Choose option</option>
+								<option value="1" {{'selected' if request.form['house_bedroom'] == '1' else ""}}>1</option>
+								<option value="2" {{'selected' if request.form['house_bedroom'] == '2' else ""}}>2</option>
+								<option value="3" {{'selected' if request.form['house_bedroom'] == '3' else ""}}>3</option>
+								<option value="4" {{'selected' if request.form['house_bedroom'] == '4' else ""}}>4</option>
+								<option value="5" {{'selected' if request.form['house_bedroom'] == '5' else ""}}>5</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="name">Swimming Pool</div>
+					<div class="value">					
+						<input  class="input--style-5" style="width:20px" type="checkbox" id="house_swimmingpool" name="house_swimmingpool" value='1'  {{'checked="checked"' if request.form['house_swimmingpool'] else ""}}>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="name">Attic</div>
+					<div class="value">
+						<input  class="input--style-5" style="width:20px" type="checkbox" id="house_attic" name="house_attic" value='1'  {{'checked="checked"' if request.form['house_attic'] else ""}}>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="name">Terrace</div>
+					<div class="value">
+						<input  class="input--style-5" style="width:20px" type="checkbox" id="house_terrace" name="house_terrace" value='1' {{'checked="checked"' if request.form['house_terrace'] else ""}}>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="name">Predicted Price</div>
+					<div class="value">
+						{% if price%}
+							£ {{ price}}
+						{% endif %}
+					</div>
+				</div>
+				<div class="form-row">					
+					
+		        <input type="submit" value="Submit"  name="btn_submit" OnClientClick="return Validate();return false;" />                   
+        		<input type="hidden" value="{{ json_data }}" name="jsonHouse_data" />
+
+				</div>
+			</form>
+			<script type="text/javascrpt">
+				function Validate()
+				{
+					
+				}
+			</script>
+		</div>
+	</div>
+</body></html>
