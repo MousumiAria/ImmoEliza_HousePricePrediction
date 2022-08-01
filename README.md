@@ -18,7 +18,7 @@
 * 6 days
 
 ## Dataset details:
-* DataSets used by scrapping Datas from The real estate company "ImmoEliza" in Belgium. The datasets contained approx(~10,000) house details including information like locality, type of property, price, area, no. of rooms, no. of bathrooms etc.
+* DataSets used by scrapping datas from the real estate company "ImmoEliza" in Belgium. The datasets contained approx(~10,000) house details including information like locality, type of property, price, area, no. of rooms, no. of bathrooms etc.
 
 ## Description:
 
