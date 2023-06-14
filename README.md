@@ -21,6 +21,7 @@
 * DataSets used by scrapping datas from the real estate company "ImmoEliza" in Belgium. The datasets contained approx(~10,000) house details including information like locality, type of property, price, area, no. of rooms, no. of bathrooms etc.
 
 ## Description:
+![ImmoEliza_HousePricePrediction](https://github.com/MousumiAria/ImmoEliza_HousePricePrediction/blob/main/image.JPG?raw=true)
 
 ImmoEliza_HousePricePrediction is an interactive application to predict house prices based on several features like Surface area, Number of Bed Rooms, Attic, Terrace, Swimming Pool etc. With this App the user can provide their preferred features and gets an estimated price of the house. The following procedures have been followed for building the application.
 
